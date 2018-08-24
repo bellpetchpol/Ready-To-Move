@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.44609e4bcb1a1f7524d6d1a9acd65f3d.js"
+  "/precache-manifest.4eabdc7bd9bc176fc1df2db68c07feeb.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "room-inspection"});

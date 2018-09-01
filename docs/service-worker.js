@@ -14,10 +14,8 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a120ec7ccb784f9422b4758b9ebcc728.js"
+  "/precache-manifest.40d3ea1057e0459d83e67035fa4d7c9d.js"
 );
-
-workbox.core.setCacheNameDetails({prefix: "room-inspection"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -27,3 +25,6 @@ workbox.core.setCacheNameDetails({prefix: "room-inspection"});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerRoute(/^https:\/\/fonts.googleapis.com\//, workbox.strategies.staleWhileRevalidate({ plugins: [new workbox.cacheableResponse.Plugin({"statuses":[0,200]})] }), 'GET');
+workbox.routing.registerRoute(/^https:\/\/fonts.gstatic.com\//, workbox.strategies.staleWhileRevalidate({ plugins: [new workbox.cacheableResponse.Plugin({"statuses":[0,200]})] }), 'GET');
